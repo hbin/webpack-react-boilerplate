@@ -4,10 +4,9 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
-  context: path.resolve(__dirname, 'src'),
   entry: {
     app: [
-      './index.js'
+      './src/index.jsx'
     ],
     libs: [
       'react',

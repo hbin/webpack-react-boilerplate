@@ -4,9 +4,10 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   devtool: 'eval',
+
   entry: [
     'webpack-hot-middleware/client',
-    './src/index.js'
+    './src/index.jsx'
   ],
 
   output: {
