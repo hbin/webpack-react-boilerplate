@@ -1,0 +1,6 @@
+dist/*
+webpack.dev.config.js
+webpack.prod.config.js
+GPATH
+GRTAGS
+GTAGS

@@ -1,0 +1,28 @@
+{
+  "ecmaFeatures": {
+    "jsx": true,
+    "modules": true,
+  },
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true
+  },
+  "parser": "babel-eslint",
+  "rules": {
+    "indent": [2, 2],
+    "quotes": [2, "single"],
+    "strict": 0,
+    "linebreak-style": [2, "unix"],
+    "semi": [2, "always"],
+    "no-console": 0,
+    "no-alert": 0,
+    "react/jsx-uses-react": 2,
+    "react/jsx-uses-vars": 2,
+    "react/react-in-jsx-scope": 2,
+  },
+  "extends": "eslint:recommended",
+  "plugins": [
+    "react"
+  ]
+}

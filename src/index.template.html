@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv='content-type' content='text/html; charset=utf-8' />
+    <title>{%= o.htmlWebpackPlugin.options.title %}</title>
+
+    {% for (var css in o.htmlWebpackPlugin.files.css) { %}
+    <link rel='stylesheet' href='{%= o.htmlWebpackPlugin.files.css[css]%}' />
+    {% } %}
+  </head>
+
+  <body>
+    <div id='container'>
+    </div>
+  </body>
+  {% for (var chunk in o.htmlWebpackPlugin.files.chunks) { %}
+  <script type='text/javascript' src='{%=o.htmlWebpackPlugin.files.chunks[chunk].entry%}' charset='utf-8'></script>
+  {% } %}
+</html>
