@@ -1,7 +1,7 @@
-import Home from '../containers/Home';
-import TodoApp from '../containers/TodoApp';
-import Foo from '../containers/Foo';
-import Bar from '../containers/Bar';
+import Home from './containers/Home';
+import TodoApp from './containers/TodoApp';
+import Foo from './containers/Foo';
+import Bar from './containers/Bar';
 
 const createRoutes = () => {
   return {

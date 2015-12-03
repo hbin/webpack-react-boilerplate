@@ -24,6 +24,12 @@ module.exports = {
     new webpack.optimize.DedupePlugin(),
     new webpack.optimize.UglifyJsPlugin({compress: { warnings: false }}),
     new webpack.optimize.CommonsChunkPlugin('libs', 'js/commons-[chunkhash].js'),
+    new webpack.DefinePlugin({
+      'process.env': {
+        // Useful to reduce the size of client-side libraries, e.g. react
+        NODE_ENV: JSON.stringify('production')
+      }
+    }),
     new HtmlWebpackPlugin({
       title: 'Webpack React Biolerplate',
       filename: 'index.html',
