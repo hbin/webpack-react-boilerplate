@@ -2,14 +2,17 @@ import React, { Component } from 'react';
 
 import { Link } from 'react-router';
 
-class Foo extends Component {
+class FooApp extends Component {
   render() {
     return (
       <div>
-        I am foo. Let's go to <Link to="/bar">Bar</Link>
+        I am FooApp.
+
+        <br />
+        Go to <Link to="/bar">Bar</Link>
       </div>
     );
   }
 }
 
-export default Foo;
+export default FooApp;

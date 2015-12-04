@@ -11,7 +11,7 @@ import configureStore from './store';
 
 let reduxTools = null;
 if (__DEVTOOLS__) {
-  const DevTools = require('./containers/DevTools');
+  const DevTools = require('./components/DevTools');
   reduxTools = (
     <DevTools />
   )
