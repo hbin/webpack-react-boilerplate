@@ -23,7 +23,8 @@ module.exports = {
       'process.env': {
         // Useful to reduce the size of client-side libraries, e.g. react
         NODE_ENV: JSON.stringify('development')
-      }
+      },
+      __DEVTOOLS__: true
     }),
     new HtmlWebpackPlugin({
       title: 'Webpack React Biolerplate',

@@ -9,13 +9,24 @@ import createBrowserHistory from 'history/lib/createBrowserHistory';
 import createRoutes from './routes';
 import configureStore from './store';
 
-import Root from './containers/Root';
+let reduxTools = null;
+if (__DEVTOOLS__) {
+  const DevTools = require('./containers/DevTools');
+  reduxTools = (
+    <DevTools />
+  )
+}
 
 const history = createBrowserHistory();
 const routes = createRoutes();
 const store = configureStore();
 
 render(
-  <Root store={store} history={history} routes={routes} />,
+  <Provider store={store}>
+    <div>
+      <Router history={history} routes={routes} />
+      {reduxTools}
+    </div>
+  </Provider>,
   document.getElementById('container')
 );
