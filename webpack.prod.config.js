@@ -77,7 +77,7 @@ module.exports = {
   postcss: function () {
     return [
       require('autoprefixer'),
-      require('postcss-color-rebeccapurple'),
+      require('postcss-color-rebeccapurple')
     ];
   },
 

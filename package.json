@@ -5,7 +5,7 @@
   "main": "src/app.js",
   "scripts": {
     "clean": "rimraf dist",
-    "build:webpack": "NODE_ENV=production webpack -p --progress --config webpack.prod.config.js",
+    "build:webpack": "webpack -p --progress --config webpack.prod.config.js",
     "build": "npm run clean && npm run build:webpack",
     "start": "node devServer.js"
   },
@@ -24,18 +24,15 @@
     "express": "^4.13.3",
     "extract-text-webpack-plugin": "^0.9.1",
     "file-loader": "^0.8.5",
-    "history": "^1.13.1",
     "html-webpack-plugin": "^1.7.0",
     "postcss-color-rebeccapurple": "^2.0.0",
     "postcss-loader": "^0.8.0",
-    "react-router": "^1.0.0",
     "react-transform-catch-errors": "^1.0.0",
     "react-transform-hmr": "^1.0.1",
     "redbox-react": "^1.2.0",
     "redux-devtools": "^3.0.0-beta-3",
     "redux-devtools-dock-monitor": "^1.0.0-beta-3",
     "redux-devtools-log-monitor": "^1.0.0-beta-3",
-    "redux-thunk": "^1.0.0",
     "rimraf": "^2.4.4",
     "style-loader": "^0.13.0",
     "url-loader": "^0.5.7",
@@ -44,10 +41,13 @@
     "webpack-hot-middleware": "^2.6.0"
   },
   "dependencies": {
+    "history": "^1.13.1",
     "normalize.css": "^3.0.3",
     "react": "^0.14.3",
     "react-dom": "^0.14.3",
     "react-redux": "^4.0.0",
-    "redux": "^3.0.4"
+    "react-router": "^1.0.0",
+    "redux": "^3.0.4",
+    "redux-thunk": "^1.0.0"
   }
 }
