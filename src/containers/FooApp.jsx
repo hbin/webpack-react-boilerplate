@@ -1,15 +1,28 @@
 import React, { Component } from 'react';
-
-import { Link } from 'react-router';
+import UserList from '../components/UserList';
 
 class FooApp extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {users: []};
+  }
+
+  componentDidMount() {
+    $.ajax({
+      url: 'http://sample.dev/users.json',
+      type: 'GET',
+      dataType: 'json',
+      success: function (data) {
+        this.setState({users: data});
+      }.bind(this)
+    });
+  }
+
   render() {
     return (
       <div>
-        I am FooApp.
-
+        <UserList users={this.state.users} />
         <br />
-        Go to <Link to="/bar">Bar</Link>
       </div>
     );
   }

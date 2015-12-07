@@ -19,6 +19,10 @@ module.exports = {
     filename: 'js/[name]-[chunkhash].js'
   },
 
+  externals: {
+    'jquery': 'jQuery'
+  },
+
   plugins: [
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.optimize.DedupePlugin(),
@@ -30,6 +34,9 @@ module.exports = {
         NODE_ENV: JSON.stringify('production')
       },
       __DEVTOOLS__: false
+    }),
+    new webpack.ProvidePlugin({
+      $: 'jquery'
     }),
     new HtmlWebpackPlugin({
       title: 'Webpack React Biolerplate',

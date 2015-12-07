@@ -15,6 +15,10 @@ module.exports = {
     filename: 'bundle.js'
   },
 
+  externals: {
+    'jquery': 'jQuery'
+  },
+
   plugins: [
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin(),
@@ -25,6 +29,9 @@ module.exports = {
         NODE_ENV: JSON.stringify('development')
       },
       __DEVTOOLS__: true
+    }),
+    new webpack.ProvidePlugin({
+      $: 'jquery'
     }),
     new HtmlWebpackPlugin({
       title: 'Webpack React Biolerplate',
