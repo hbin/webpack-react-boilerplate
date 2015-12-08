@@ -4,11 +4,11 @@
   "description": "",
   "main": "src/app.js",
   "scripts": {
+    "build": "webpack -p --progress --config webpack.prod.config.js",
+    "devWatch": "webpack --watch --config webpack.dev.config.js",
+    "dist": "npm run clean && npm run build",
     "clean": "rimraf dist",
-    "build:webpack": "webpack -p --progress --config webpack.prod.config.js",
-    "build": "npm run clean && npm run build:webpack",
-    "watch": "webpack --watch --config webpack.dev.config.js",
-    "start": "node devServer.js"
+    "start": "npm run clean && npm run devWatch & node devServer.js"
   },
   "author": "Huang Bin @hbin",
   "license": "ISC",
