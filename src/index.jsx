@@ -9,13 +9,9 @@ import createBrowserHistory from 'history/lib/createBrowserHistory';
 import createRoutes from './routes';
 import configureStore from './store';
 
-let reduxTools = null;
-if (__DEVTOOLS__) {
-  const DevTools = require('./components/DevTools');
-  reduxTools = (
-    <DevTools />
-  )
-}
+// There is side-effect here, the redux-devtools will always be
+// compiled in the bundle files.
+import DevTools from './components/DevTools';
 
 const history = createBrowserHistory();
 const routes = createRoutes();
@@ -25,7 +21,7 @@ render(
   <Provider store={store}>
     <div>
       <Router history={history} routes={routes} />
-      {reduxTools}
+      { __DEVTOOLS__ && <DevTools /> }
     </div>
   </Provider>,
   document.getElementById('container')
