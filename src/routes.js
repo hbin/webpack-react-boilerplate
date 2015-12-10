@@ -1,17 +1,17 @@
 import Home from './containers/Home';
-import TodoApp from './containers/TodoApp';
+import Todoist from './containers/Todoist';
 import FooApp from './containers/FooApp';
-import BarApp from './containers/BarApp';
+import Reddit from './containers/Reddit';
 
 const createRoutes = () => {
   return {
     path: '/',
     component: Home,
-    indexRoute: { component: TodoApp },
+    indexRoute: { component: Todoist },
     childRoutes: [
-      { path: 'todo', component: TodoApp },
+      { path: 'todoist', component: Todoist },
       { path: 'foo', component: FooApp },
-      { path: 'bar', component: BarApp }
+      { path: 'reddit', component: Reddit }
     ]
   };
 };

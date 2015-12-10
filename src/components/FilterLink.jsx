@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import { setVisibilityFilter } from '../actions';
+import { setVisibilityFilter } from '../actions/todolist';
 
 const FilterLink =({
   active,
@@ -29,7 +29,7 @@ const mapStateToProps = (
   ownProps
 ) => {
   return {
-    active: ownProps.filter === state.visibilityFilter
+    active: ownProps.filter === state.todolist.visibilityFilter
   };
 };
 

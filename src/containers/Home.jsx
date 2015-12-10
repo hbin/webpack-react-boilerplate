@@ -7,11 +7,11 @@ class Home extends Component {
     const { children } = this.props;
     return (
       <div>
-        <Link to="/todo">Go to Todo</Link>
+        <Link to="/todoist">Todoist</Link>
         {' | '}
-        <Link to="/foo">Go to Foo</Link>
+        <Link to="/foo">Foo</Link>
         {' | '}
-        <Link to="/bar">Go to Bar</Link>
+        <Link to="/reddit">Reddit</Link>
         <hr />
         {children}
       </div>

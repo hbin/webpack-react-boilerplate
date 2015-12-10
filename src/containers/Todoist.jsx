@@ -4,7 +4,7 @@ import AddTodo from '../components/AddTodo';
 import TodoList from '../components/TodoList';
 import Footer from '../components/Footer';
 
-class TodoApp extends Component {
+class Todoist extends Component {
   render() {
     return (
       <div>
@@ -16,4 +16,4 @@ class TodoApp extends Component {
   }
 }
 
-export default TodoApp;
+export default Todoist;

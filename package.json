@@ -37,6 +37,7 @@
     "redux-devtools": "^3.0.0-beta-3",
     "redux-devtools-dock-monitor": "^1.0.0-beta-3",
     "redux-devtools-log-monitor": "^1.0.0-beta-3",
+    "redux-logger": "^2.2.1",
     "rimraf": "^2.4.4",
     "style-loader": "^0.13.0",
     "url-loader": "^0.5.7",
@@ -45,8 +46,9 @@
     "webpack-hot-middleware": "^2.6.0"
   },
   "dependencies": {
+    "es6-promise": "^3.0.2",
     "history": "1.13.1",
-    "normalize.css": "^3.0.3",
+    "isomorphic-fetch": "^2.2.0",
     "react": "^0.14.3",
     "react-dom": "^0.14.3",
     "react-redux": "^4.0.0",
