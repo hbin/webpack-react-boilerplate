@@ -22,7 +22,6 @@ class FooApp extends Component {
     return (
       <div>
         <UserList users={this.state.users} />
-        <br />
       </div>
     );
   }

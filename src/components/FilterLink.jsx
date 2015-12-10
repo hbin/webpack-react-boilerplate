@@ -1,10 +1,12 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-const Link =({
+import { setVisibilityFilter } from '../actions';
+
+const FilterLink =({
   active,
-  children,
-  onClick
+  onClick,
+  children
 }) => {
   if (active) {
     return <span>{children}</span>;
@@ -22,14 +24,7 @@ const Link =({
   );
 };
 
-const setVisibilityFilter = (filter) => {
-  return {
-    type: 'SET_VISIBILITY_FILTER',
-    filter: filter
-  };
-};
-
-const mapStateToLinkProps = (
+const mapStateToProps = (
   state,
   ownProps
 ) => {
@@ -38,20 +33,18 @@ const mapStateToLinkProps = (
   };
 };
 
-const mapDispatchToLinkProps = (
+const mapDispatchToProps = (
   dispatch,
   ownProps
 ) => {
   return {
-    onClick: (owerProns) => {
+    onClick: () => {
       dispatch(setVisibilityFilter(ownProps.filter));
     }
   };
 };
 
-const FilterLink = connect(
-  mapStateToLinkProps,
-  mapDispatchToLinkProps
-)(Link);
-
-export default FilterLink;
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(FilterLink);

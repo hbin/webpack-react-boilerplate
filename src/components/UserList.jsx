@@ -6,14 +6,12 @@ const UserList = ({
   users
 }) => (
   <ul>
-    {
-      users.map(user =>
-        <UserItem
-            key={user.id}
-            {...user}
-        />
-      )
-    }
+    {users.map(user =>
+      <UserItem
+          key={user.id}
+          {...user}
+      />
+     )}
   </ul>
 );
 

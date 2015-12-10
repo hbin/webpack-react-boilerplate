@@ -1,12 +1,15 @@
+import { ADD_TODO, TOGGLE_TODO } from '../actions/types';
+
+let nextTodoId = 0;
 const todo = (state = {}, action) => {
   switch(action.type) {
-  case 'ADD_TODO':
+  case ADD_TODO:
     return {
-      id: action.id,
+      id: nextTodoId++,
       text: action.text,
       completed: false
     };
-  case 'TOGGLE_TODO':
+  case TOGGLE_TODO:
     if (action.id !== state.id) {
       return state;
     }

@@ -1,14 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-let nextTodoId = 0;
-const addTodo = (text) => {
-  return {
-    type: 'ADD_TODO',
-    id: nextTodoId++,
-    text
-  };
-};
+import { addTodo } from '../actions';
 
 let AddTodo = ({ dispatch }) => {
   let input;
@@ -27,6 +20,5 @@ let AddTodo = ({ dispatch }) => {
     </div>
   );
 };
-AddTodo = connect()(AddTodo);
 
-export default AddTodo;
+export default connect()(AddTodo);
