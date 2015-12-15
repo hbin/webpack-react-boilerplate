@@ -1,31 +1,31 @@
 import fetch from 'isomorphic-fetch';
 
-import { SELECT_REDDIT, INVALIDATE_REDDIT, REQUEST_POSTS, RECEIVE_POSTS } from './types';
+import * as types from '../constants/ActionTypes';
 
 export function selectReddit(reddit) {
   return {
-    type: SELECT_REDDIT,
+    type: types.SELECT_REDDIT,
     reddit
   };
 }
 
 export function invalidateReddit(reddit) {
   return {
-    type: INVALIDATE_REDDIT,
+    type: types.INVALIDATE_REDDIT,
     reddit
   };
 }
 
 export function requestPosts(reddit) {
   return {
-    type: REQUEST_POSTS,
+    type: types.REQUEST_POSTS,
     reddit
   };
 }
 
 export function receivePosts(reddit, json) {
   return {
-    type: RECEIVE_POSTS,
+    type: types.RECEIVE_POSTS,
     reddit,
     posts: json.data.children.map(child => child.data),
     receivedAt: Date.now()
@@ -40,7 +40,6 @@ export function fetchPosts(reddit) {
       .then(json => dispatch(receivePosts(reddit, json)));
   };
 }
-
 
 function shouldFetchPosts(state, reddit) {
   const posts = state.reddit.postsByReddit[reddit];

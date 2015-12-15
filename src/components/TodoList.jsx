@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import { VisibilityFilters } from '../actions/types';
+import { VisibilityFilters } from '../constants/ActionTypes';
 import { toggleTodo } from '../actions/todolist';
 import TodoItem from './TodoItem';
 
