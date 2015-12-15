@@ -5,6 +5,7 @@
     <title>{%= o.htmlWebpackPlugin.options.title %}</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" type="text/javascript"></script>
 
+    <link rel="icon" href="data:;base64,=">
     {% for (var css in o.htmlWebpackPlugin.files.css) { %}
     <link rel='stylesheet' href='{%= o.htmlWebpackPlugin.files.css[css]%}' />
     {% } %}
