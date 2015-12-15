@@ -1,6 +1,6 @@
 import Home from './containers/Home';
 import Todoist from './containers/Todoist';
-import FooApp from './containers/FooApp';
+import Sample from './containers/Sample';
 import Reddit from './containers/Reddit';
 
 const createRoutes = () => {
@@ -10,7 +10,7 @@ const createRoutes = () => {
     indexRoute: { component: Todoist },
     childRoutes: [
       { path: 'todoist', component: Todoist },
-      { path: 'foo', component: FooApp },
+      { path: 'sample', component: Sample },
       { path: 'reddit', component: Reddit }
     ]
   };

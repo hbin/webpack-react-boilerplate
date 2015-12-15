@@ -1,13 +1,14 @@
 /*
- * todolist action types
+ * Common
+ */
+export const NETWORK_ERROR = 'NETWORK_ERROR';
+
+/*
+ * Todolist
  */
 export const ADD_TODO = 'ADD_TODO';
 export const TOGGLE_TODO = 'TOGGLE_TODO';
 export const SET_VISIBILITY_FILTER = 'SET_VISIBILITY_FILTER';
-
-/*
- * other todolist constants
- */
 
 export const VisibilityFilters = {
   SHOW_ALL: 'SHOW_ALL',
@@ -17,7 +18,14 @@ export const VisibilityFilters = {
 
 
 /*
- * reddit action types
+ * Sample App
+ */
+export const REQUEST_USERS = 'REQUEST_USERS';
+export const RECEIVE_USERS = 'RECEIVE_USERS';
+
+
+/*
+ * Reddit
  */
 export const SELECT_REDDIT = 'SELECT_REDDIT';
 export const INVALIDATE_REDDIT = 'INVALIDATE_REDDIT';

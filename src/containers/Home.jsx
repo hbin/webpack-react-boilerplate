@@ -9,7 +9,7 @@ class Home extends Component {
       <div>
         <Link to="/todoist">Todoist</Link>
         {' | '}
-        <Link to="/foo">Foo</Link>
+        <Link to="/sample">Sample App</Link>
         {' | '}
         <Link to="/reddit">Reddit</Link>
         <hr />

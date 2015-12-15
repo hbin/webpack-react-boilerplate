@@ -16,14 +16,14 @@ export function invalidateReddit(reddit) {
   };
 }
 
-export function requestPosts(reddit) {
+function requestPosts(reddit) {
   return {
     type: types.REQUEST_POSTS,
     reddit
   };
 }
 
-export function receivePosts(reddit, json) {
+function receivePosts(reddit, json) {
   return {
     type: types.RECEIVE_POSTS,
     reddit,
@@ -32,7 +32,7 @@ export function receivePosts(reddit, json) {
   };
 }
 
-export function fetchPosts(reddit) {
+function fetchPosts(reddit) {
   return function (dispatch) {
     dispatch(requestPosts(reddit));
     return fetch(`https://www.reddit.com/r/${reddit}.json`)
